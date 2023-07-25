@@ -1,25 +1,54 @@
-TOKIO: REST API
+FIUBAWallet: REST API
 ========
+# EN
+REST API meant to interact with the [FIUBAWallet Telegram Bot](https://github.com/MateoCraviotto/FIUBAWalletBot).
 
-## Integrantes
-- Gabriel Belletti
+Project for the Software Engineering II course in FIUBA. It consists in a virtual wallet with basic transactions such as virtual currency transfer and expense sharing. The whole project was done in three weeks using Xtreme Programming (Agile Methodology), getting the requirements from a Product Owner and developing the features using Test-Driven Development (TDD) in one week sprints.
+
+Project based on:
+* Sinatra, web framework for Ruby
+* Sequel for data access with the Repository pattern
+* PostgreSQL
+* The Hexagonal Architecture pattern
+
+It also contains:
+* Gherkin/Cucumber acceptance tests
+* Rspec unit tests
+* SimpleCov to measure test coverage
+* Rubocop for code styling
+* Rake for task automation
+
+## Collaborators
 - Mateo Craviotto
 - Juan Cruz Roussilian
+- Gabriel Belletti
 
-## Product Owner
-- Joaquin Casal
+## Setup
 
-## Detalles de la aplicación
-- URL de API en ambiente de *test*: https://restapi-test-tokio-nicopaez.cloud.okteto.net/
-- URL de API en ambiente de *producción*: https://restapi-prod-tokio-nicopaez.cloud.okteto.net/
-- Nombre del bot en ambiente de *test*: **tokio-test-bot**
-- Nombre del bot en ambiente de *producción*: **tokio-prod-bot**
-- Status page de monitoreo de API en test y produccion: https://stats.uptimerobot.com/v6pLOCOjzG
+Install dependencies:
+
+    bundle install
+
+Run the tests (cucumber + rspec) and linter (rubocop):
+
+    bundle exec rake    
+
+Run the app (runs migrations + webapp):    
+
+    ./start_app.sh
+
+---
+# ES
+REST API para interactuar con el [FIUBAWallet Telegram Bot](https://github.com/MateoCraviotto/FIUBAWalletBot).
+
+Proyecto para la materia 95.21 Métodos y Modelos de la Ingeniería de Software 2, FIUBA. Consiste en una billetera virtual con características simples como transacciones en moneda virtual entre usuarios, además de la posibilidad de compartir gastos, entre otras. El proyecto en su totalidad fue realizado en tres semanas usando la metodología Xtreme Programming, donde se obtenían los requerimientos del Product Owner y se desarrollaba en sprints de una semana usando Test-Driven Development (TDD).
 
 Este proyecto está basado en:
 
-* Sinatra (micro framework web) y Sequel (componente de acceso datos)
+* Sinatra (micro framework web de Ruby)
+* Sequel (componente de acceso datos usando patrón Repository)
 * PostgreSQL (base de datos relacional)
+* Patrón de Arquitectura Hexagonal
 
 Por otro lado a nivel desarrollo tiene:
 
@@ -29,8 +58,12 @@ Por otro lado a nivel desarrollo tiene:
 * Verificación de estilos con Rubocop
 * Automatización de tareas de Rake
 
-Tareas habituales
------------------
+## Integrantes
+- Gabriel Belletti
+- Mateo Craviotto
+- Juan Cruz Roussilian
+
+## Setup
 
 Inicialmente hay que instalar las dependencias:
 
